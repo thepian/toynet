@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "5b52bdfcb80e54a07daebf495bd52b47",
+        "name": "banana_0079.JPG",
+        "path": "file:/Volumes/Projects/toynet/images/banana_0079.JPG",
+        "size": {
+            "width": 1280,
+            "height": 960
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "exl8njorS",
+            "type": "RECTANGLE",
+            "tags": [
+                "banana"
+            ],
+            "boundingBox": {
+                "height": 411.7217524980784,
+                "width": 657.6340057636887,
+                "left": 386.3544668587896,
+                "top": 395.2892006149116
+            },
+            "points": [
+                {
+                    "x": 386.3544668587896,
+                    "y": 395.2892006149116
+                },
+                {
+                    "x": 1043.9884726224784,
+                    "y": 395.2892006149116
+                },
+                {
+                    "x": 1043.9884726224784,
+                    "y": 807.0109531129899
+                },
+                {
+                    "x": 386.3544668587896,
+                    "y": 807.0109531129899
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}

@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "88f8fd74ccdbc64dbff0b2bbec7b435a",
+        "name": "apple_0067.JPG",
+        "path": "file:/Volumes/Projects/toynet/images/apple_0067.JPG",
+        "size": {
+            "width": 1280,
+            "height": 960
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "K2lFiHe74",
+            "type": "RECTANGLE",
+            "tags": [
+                "apple"
+            ],
+            "boundingBox": {
+                "height": 277.4913528055342,
+                "width": 338.4495677233429,
+                "left": 546.0518731988473,
+                "top": 378.369523443505
+            },
+            "points": [
+                {
+                    "x": 546.0518731988473,
+                    "y": 378.369523443505
+                },
+                {
+                    "x": 884.5014409221901,
+                    "y": 378.369523443505
+                },
+                {
+                    "x": 884.5014409221901,
+                    "y": 655.8608762490392
+                },
+                {
+                    "x": 546.0518731988473,
+                    "y": 655.8608762490392
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}

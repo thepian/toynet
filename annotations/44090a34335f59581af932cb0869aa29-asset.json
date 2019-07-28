@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPG",
+        "id": "44090a34335f59581af932cb0869aa29",
+        "name": "carrot_0600.JPG",
+        "path": "file:/Volumes/Projects/toynet/images/carrot_0600.JPG",
+        "size": {
+            "width": 1280,
+            "height": 960
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "_JAUQc0Xn",
+            "type": "RECTANGLE",
+            "tags": [
+                "carrot"
+            ],
+            "boundingBox": {
+                "height": 496.69196771714064,
+                "width": 389.35734870317,
+                "left": 564.8674351585014,
+                "top": 463.3080322828593
+            },
+            "points": [
+                {
+                    "x": 564.8674351585014,
+                    "y": 463.3080322828593
+                },
+                {
+                    "x": 954.2247838616714,
+                    "y": 463.3080322828593
+                },
+                {
+                    "x": 954.2247838616714,
+                    "y": 960
+                },
+                {
+                    "x": 564.8674351585014,
+                    "y": 960
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}
