@@ -13,6 +13,7 @@ for entry in os.scandir(path="annotations"):
         with open(entry.path) as f:
             data = json.load(f)
             regions = data["regions"]
+            #TODO train multiple regions
             if len(regions) > 0:
                 tag = regions[0]["tags"][0] or "unknown"
                 boundingBox = regions[0]["boundingBox"]
