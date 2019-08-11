@@ -8,6 +8,9 @@ annotations: The annotated dataset split in training and evaluation records. It 
 
 ## Steps before training
 
+Install by
+> pip3 install -r ./requirements.txt
+
 Save images to the correct folder in `dataset`. Run the `autorotate.sh` script to ensure that any rotation information in the EXIF data of the JPEGs are applied so the base picture has the right rotation. Make sure that jpegtrans and nconvert are installed as per [SuperUser](https://superuser.com/questions/670818/how-to-automatically-rotate-images-based-on-exif-data) and [XNView](https://www.xnview.com/en/nconvert/#downloads)
 
 Take new pictures with the dedicated iPad which produces 1280x960 JPEGs at around 300-400Kb.
@@ -46,6 +49,24 @@ Official local training guide
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md?source=post_page---------------------------
 
 
+## Freezing after Training
+
+tools link to: /usr/local/lib/python3.7/site-packages/tensorflow/python/tools
+
+python tools/freeze_graph.py \
+--input_graph=model/saved_model.pb \
+--input_checkpoint=./model/checkpoint \
+--output_graph=./model/frozen_network.pb \
+--output_node_names=toys --input_binary
+
+python tools/optimize_for_inference.py \
+--input=./export/frozen_network.pb \
+--output=./export/optim_frozen_network.pb \
+--input_names=./model/graph.pbtxt \
+--output_names=toys \
+--frozen_graph=True
+
+
 ## Utils
 
 
@@ -61,8 +82,13 @@ python retrain.py --logtostderr --train_dir=./images/train --pipelin_config_path
 List of pretrained networks
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
 
+## Python 3 is the default version
 
-
+> cd /usr/local/bin
+> rm python
+> ln -s python3 python
+> rm pip
+> ln -s pip3 pip
 
 ## Target Model for Talki
 
