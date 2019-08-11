@@ -7,6 +7,9 @@ find . -name '*.JPG' -exec ln {} ../{} \;
 cd ../banana
 rename -vs IMG_ banana_ *
 find . -name '*.JPG' -exec ln {} ../{} \;
+cd ../biscuit
+rename -vs IMG_ biscuit_ *
+find . -name '*.JPG' -exec ln {} ../{} \;
 cd ../carrot
 rename -vs IMG_ carrot_ *
 find . -name '*.JPG' -exec ln {} ../{} \;
@@ -33,6 +36,12 @@ rename -vs IMG_ fish_ *
 find . -name '*.JPG' -exec ln {} ../{} \;
 cd ../flamingo
 rename -vs IMG_ flamingo_ *
+find . -name '*.JPG' -exec ln {} ../{} \;
+cd ../horse
+rename -vs IMG_ horse_ *
+find . -name '*.JPG' -exec ln {} ../{} \;
+cd ../sponge-cake
+rename -vs IMG_ sponge-cake_ *
 find . -name '*.JPG' -exec ln {} ../{} \;
 
 # ln -s images/apple/{} images/{} +;

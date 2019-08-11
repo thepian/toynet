@@ -9,9 +9,10 @@ annotations: The annotated dataset split in training and evaluation records. It 
 ## Steps before training
 
 Install by
+> brew install rename
 > pip3 install -r ./requirements.txt
 
-Save images to the correct folder in `dataset`. Run the `autorotate.sh` script to ensure that any rotation information in the EXIF data of the JPEGs are applied so the base picture has the right rotation. Make sure that jpegtrans and nconvert are installed as per [SuperUser](https://superuser.com/questions/670818/how-to-automatically-rotate-images-based-on-exif-data) and [XNView](https://www.xnview.com/en/nconvert/#downloads)
+Save images to the correct folder in `images`. Run the `autorotate.sh` script to ensure that any rotation information in the EXIF data of the JPEGs are applied so the base picture has the right rotation. Make sure that jpegtrans and nconvert are installed as per [SuperUser](https://superuser.com/questions/670818/how-to-automatically-rotate-images-based-on-exif-data) and [XNView](https://www.xnview.com/en/nconvert/#downloads)
 
 Take new pictures with the dedicated iPad which produces 1280x960 JPEGs at around 300-400Kb.
 Place the images in the correct label directory.
