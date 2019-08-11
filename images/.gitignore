@@ -1,1 +1,2 @@
-*.JPG
+# Ignore the common linked JPGs
+/*.JPG
