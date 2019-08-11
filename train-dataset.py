@@ -296,3 +296,10 @@ try:
 except Exception:
     pass
 saver.save(sess, 'model/toynet.ckpt')
+
+tf.io.write_graph(tf.get_default_graph(), 'model', 'graph.pbtxt')
+tf.train.write_graph(tf.get_default_graph(), 'model', 'saved_model.pb', as_text=False)
+
+# TODO freeze the graph and save .pb file
+
+# tf.python.tools.freeze_graph()
