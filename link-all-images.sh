@@ -1,5 +1,4 @@
 #! /bin/sh
-brew install rename
 rm images/*.JPG
 cd images/apple
 rename -vs IMG_ apple_ *
