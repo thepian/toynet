@@ -28,7 +28,7 @@ import time
 
 matplotlib.use('MACOSX')
 
-FLOWERS_DIR = './dataset'
+DATASET_DIR = './dataset'
 TRAIN_FRACTION = 0.8
 RANDOM_SEED = 2018
 
@@ -41,7 +41,7 @@ def make_train_and_test_sets():
   train_examples, test_examples = [], []
   shuffler = random.Random(RANDOM_SEED)
   is_root = True
-  for (dirname, subdirs, filenames) in tf.gfile.Walk(FLOWERS_DIR):
+  for (dirname, subdirs, filenames) in tf.gfile.Walk(DATASET_DIR):
     # The root directory gives us the classes
     if is_root:
       subdirs = sorted(subdirs)
