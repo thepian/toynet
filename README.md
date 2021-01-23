@@ -1,12 +1,58 @@
 # toynet
 Toys for Talki
 
+Project manager with Firebase account henrik@thepia.com / henrik%thepia.com@gtempaccount.com
+
 images: Source images organised by primary label as the name of directories within. Each file is also prefixed with the label.
 dataset: Extracted images based on bounding boxes and label.
-annotations: The annotated dataset split in training and evaluation records. It also holds the bounding boxes defined manually using VoTT.
+
+annotations: The annotated dataset split in training and evaluation records. 
 
 
-## Steps before training
+## Google Cloud
+
+https://console.cloud.google.com/vision/datasets?authuser=0&project=ignore-the-gap&folder=&organizationId=
+
+[Cloud Storage Blobs/Objects](https://googleapis.dev/python/storage/latest/blobs.html#google.cloud.storage.blob.Blob)
+
+[AutoML API for Python](https://googleapis.dev/python/automl/latest/index.html)
+[gcloud Install](https://cloud.google.com/sdk/gcloud/)
+[Cloud API Auth](https://googleapis.dev/python/google-api-core/latest/auth.html)
+
+If `gcloud init` or `gcloud login` doesn't work use `gcloud auth login --no-launch-browser`.
+
+Download credentials file and set reference in `.bash_profile`.
+
+
+> POST https://automl.googleapis.com/v1/projects/ignore-the-gap/locations/europe-west1/models/IOD2523258239466864640:export
+
+
+> curl -X POST \
+-H "Authorization: Bearer "$(gcloud auth print-access-token) \
+-H "Content-Type: application/json; charset=utf-8" \
+-d @tools/export-request.json \
+https://automl.googleapis.com/v1/projects/402831859832/locations/europe-west1/models/IOD2523258239466864640:export
+
+
+## Labelling
+
+For local labelling use [LabelImg](https://github.com/tzutalin/labelImg).
+
+
+## Using Miniconda
+
+Download and install the package in web browser (see darknet)
+
+> conda create -n toynet python=3.8
+> conda activate toynet
+
+To change python version
+> sudo conda install python=3.8
+
+Environment Location = ~/opt/miniconda3/envs/toynet
+
+
+## Steps before Using
 
 Install by
 > brew install rename
@@ -30,6 +76,12 @@ TODO: Some images contain more than one label. The script must be improved to ou
 TODO: expand with rotated versions. resize to specific size.
 TODO: video testing of reduced size KModel.
 
+## Darknet for Object Recognition
+
+Darknet seems to be the proven way that will work on the Edge ML chipsets.
+
+[Darknet by Alexey](https://github.com/AlexeyAB/darknet)
+
 
 ## Tensorflow Training
 
@@ -48,6 +100,11 @@ https://towardsdatascience.com/how-to-train-your-own-object-detector-with-tensor
 Official local training guide
 - Naming could be better
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md?source=post_page---------------------------
+
+[Towards Deep Learning using TensorFlow Lite on RISC-V](https://edge.seas.harvard.edu/files/edge/files/carrv_workshop_submission_2019_camera_ready.pdf)
+
+[Can Apple's M1 help you train models faster & cheaper](https://wandb.ai/vanpelt/m1-benchmark/reports/Can-Apple-s-M1-help-you-train-models-faster-cheaper-than-NVIDIA-s-V100---VmlldzozNTkyMzg)
+
 
 
 ## Freezing after Training
@@ -70,6 +127,7 @@ python tools/optimize_for_inference.py \
 
 ## Utils
 
+[Sipeed Maix Training Scripts](https://github.com/sipeed/maix_train)
 
 https://github.com/tzutalin/ImageNet_Utils
 
@@ -82,6 +140,7 @@ python retrain.py --logtostderr --train_dir=./images/train --pipelin_config_path
 
 List of pretrained networks
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
+
 
 ## Python 3 is the default version
 
@@ -110,3 +169,82 @@ python3 object_detection/model_main.py \
     --pipeline_config_path=${PIPELINE_CONFIG_PATH} --model_dir=${MODEL_DIR} \
     --num_train_steps=${NUM_TRAIN_STEPS} --sample_1_of_n_eval_examples=$SAMPLE_1_OF_N_EVAL_EXAMPLES --alsologtostderr
 cd /Volume/Projects/toynet
+
+
+### Object Detection Datasets
+
+The [MCIndoor20000](https://www.sciencedirect.com/science/article/pii/S2352340917307424) is a fully-labeled image dataset that was launched in Marshfield Clinic to facilitate broad use of image classification and recognition. 
+
+
+
+[Alpha Pose](http://www.mvig.org/research/alphapose.html) is an accurate multi-person pose estimator, which is the first [open-source](https://github.com/MVIG-SJTU/AlphaPose) system that achieves 70+ mAP (72.3 mAP) on COCO dataset and 80+ mAP (82.1 mAP) on MPII dataset. To match poses that correspond to the same person across frames, we also provide an efficient online pose tracker called Pose Flow. It is the first open-source online pose tracker that achieves both 60+ mAP (66.5 mAP) and 50+ MOTA (58.3 MOTA) on PoseTrack Challenge dataset.
+
+[AlphaPose for pytorch](https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch)
+
+[YOLO-Hand-Detection](https://github.com/cansik/yolo-hand-detection) variants including YOLOv4-Tiny Cross-Hands.
+
+[YOLOv3-model-pruning](https://github.com/Lam1360/YOLOv3-model-pruning) what is pruning?
+
+[YoloV4_Dectection_Example.ipynb](https://colab.research.google.com/github/sicara/tf2-yolov4/blob/master/notebooks/YoloV4_Dectection_Example.ipynb#scrollTo=qhgxoREBFHKn)
+
+familynet. toys/hands/face
+
+[Finger Detection and Tracking](https://github.com/amarlearning/Finger-Detection-and-Tracking)
+
+
+[Unified Gesture Recognition and Fingertip Detection](https://github.com/MahmudulAlam/Unified-Gesture-and-Fingertip-Detection)
+
+[Tencent FaceDetection DSFD](https://github.com/Tencent/FaceDetection-DSFD)
+
+[awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition)
+
+[Face vijnana yolov3](https://github.com/tonandr/face_vijnana_yolov3)
+
+[shape-detection](https://github.com/jrieke/shape-detection)
+
+
+
+[tensorflow-lite-yolo-v3](https://github.com/peace195/tensorflow-lite-YOLOv3)
+
+Convert the weights of YOLO v3 object detector into tensorflow lite format. It can be served for tensorflow serving as well.
+
+[YOLOv4 Transfer Learning/ Fine tuning](https://stackoverflow.com/questions/63866629/yolov4-transfer-learning-fine-tuning)
+
+Start with specific detection base to improve upon.
+
+[K210 YOLO V3 framework](https://github.com/zhen8838/K210_Yolo_framework)
+
+[VOC2020 Pascal2](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html#devkit)
+
+
+## Defensive Datasets
+
+Tabu
+
+[texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape)
+
+
+## Guides for Setting up Data Science Environment
+
+* [Mac ARM: Spinning up a Python Data Science Environment](https://github.com/mwidjaja1/DSOnMacARM)
+* [aXeleRate](https://github.com/AIWintermuteAI/aXeleRate)
+* [aXeleRate_pascal20_detector.ipynb example](https://colab.research.google.com/github/AIWintermuteAI/aXeleRate/blob/master/resources/aXeleRate_pascal20_detector.ipynb#scrollTo=hS9yMrWe02WQ)
+* [experientials/K210_Yolo_framework](https://github.com/experientials/K210_Yolo_framework)
+* [MobileNet v1 base 7 H5 demo](https://share.weiyun.com/5FgNE0b)
+* [Kendryte K210 Animal Tracking](https://github.com/zyayoung/K210-Tracking)
+* [Semantic Segmentation and Dataset iPython Notebook](https://colab.research.google.com/github/d2l-ai/d2l-en-colab/blob/master/chapter_computer-vision/semantic-segmentation-and-dataset.ipynb#scrollTo=oykIVZNfkyxF)
+* [Google Coral USB Accelerator](https://www.pyimagesearch.com/2019/05/13/object-detection-and-image-classification-with-google-coral-usb-accelerator/)
+
+
+## ML Courses
+
+* [Dive into Deep Learning](https://d2l.ai/index.html) [book](https://github.com/d2l-ai/d2l-book) [book en](https://github.com/d2l-ai/d2l-en)
+* [D2L Attention](https://d2l.ai/chapter_attention-mechanisms/attention-cues.html)
+* [d2l lib](https://github.com/d2l-ai/utils)
+* [a-PyTorch-Tutorial-to-Object-Detection](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection)
+
+
+## Improvements to be made
+
+[Progress Bars](https://www.geeksforgeeks.org/progress-bars-in-python/)
+
