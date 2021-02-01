@@ -83,6 +83,20 @@ Microsoft project - Alpha Quality
 [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose)
 
 
+[Face vijnana yolov3](https://github.com/tonandr/face_vijnana_yolov3)
+
+[tensorflow-lite-yolo-v3](https://github.com/peace195/tensorflow-lite-YOLOv3)
+
+Convert the weights of YOLO v3 object detector into tensorflow lite format. It can be served for tensorflow serving as well.
+
+[YOLOv4 Transfer Learning/ Fine tuning](https://stackoverflow.com/questions/63866629/yolov4-transfer-learning-fine-tuning)
+
+Start with specific detection base to improve upon.
+
+[K210 YOLO V3 framework](https://github.com/zhen8838/K210_Yolo_framework)
+
+
+
 ### Training Hardware
 
 [Choosing the Best GPU for Deep Learning in 2020](https://lambdalabs.com/blog/choosing-a-gpu-for-deep-learning/)

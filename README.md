@@ -8,6 +8,10 @@ dataset: Extracted images based on bounding boxes and label.
 
 annotations: The annotated dataset split in training and evaluation records. 
 
+This is to be implemented as [YoloV3 Implemented in TensorFlow 2.0](https://github.com/zzh8829/yolov3-tf2). It provides a clean implementation of YoloV3 in TensorFlow 2.0 using all the best practices.
+
+Follow the plain for YoloV3 at [YOLO](./YOLO3.md)
+
 
 ## Google Cloud
 
@@ -173,9 +177,9 @@ cd /Volume/Projects/toynet
 
 ### Object Detection Datasets
 
+Working on [Jupyter notebooks on Colab](https://colab.research.google.com/drive/1TNj7az-RKI5V2CugP97Wj-fwT2GUruBs#scrollTo=u3sHchp8KeIt).
+
 The [MCIndoor20000](https://www.sciencedirect.com/science/article/pii/S2352340917307424) is a fully-labeled image dataset that was launched in Marshfield Clinic to facilitate broad use of image classification and recognition. 
-
-
 
 [Alpha Pose](http://www.mvig.org/research/alphapose.html) is an accurate multi-person pose estimator, which is the first [open-source](https://github.com/MVIG-SJTU/AlphaPose) system that achieves 70+ mAP (72.3 mAP) on COCO dataset and 80+ mAP (82.1 mAP) on MPII dataset. To match poses that correspond to the same person across frames, we also provide an efficient online pose tracker called Pose Flow. It is the first open-source online pose tracker that achieves both 60+ mAP (66.5 mAP) and 50+ MOTA (58.3 MOTA) on PoseTrack Challenge dataset.
 
@@ -198,21 +202,8 @@ familynet. toys/hands/face
 
 [awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition)
 
-[Face vijnana yolov3](https://github.com/tonandr/face_vijnana_yolov3)
-
 [shape-detection](https://github.com/jrieke/shape-detection)
 
-
-
-[tensorflow-lite-yolo-v3](https://github.com/peace195/tensorflow-lite-YOLOv3)
-
-Convert the weights of YOLO v3 object detector into tensorflow lite format. It can be served for tensorflow serving as well.
-
-[YOLOv4 Transfer Learning/ Fine tuning](https://stackoverflow.com/questions/63866629/yolov4-transfer-learning-fine-tuning)
-
-Start with specific detection base to improve upon.
-
-[K210 YOLO V3 framework](https://github.com/zhen8838/K210_Yolo_framework)
 
 [VOC2020 Pascal2](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html#devkit)
 
@@ -247,4 +238,6 @@ Tabu
 ## Improvements to be made
 
 [Progress Bars](https://www.geeksforgeeks.org/progress-bars-in-python/)
+[Customizing Training Loops in TensorFlow 2.0](https://wandb.ai/site/articles/wandb-customizing-training-loops-in-tensorflow-2)
+
 
