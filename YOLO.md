@@ -2,10 +2,15 @@
 
 Real time Object Recognicion ML.
 
+The approach used is either [YOLO v3](https://github.com/ultralytics/yolov3) or [YOLO v5](https://github.com/ultralytics/yolov5). The data is used to train a custom network based on the base YOLO network.
+
+https://curiousily.com/posts/object-detection-on-custom-dataset-with-yolo-v5-using-pytorch-and-python/
+
+
 Work in progress on Colab
 https://colab.research.google.com/drive/1myWYyzouwmpR1a06pLYcu-TFn_ShBdy1#scrollTo=ahIUuIrvhJZv
 
-[https://github.com/mwidjaja1/]DSOnMacARM](https://github.com/mwidjaja1/DSOnMacARM)
+[Tensorflow on MacARM](https://github.com/mwidjaja1/DSOnMacARM)
 
 Use [miniconda](https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda). [Install](https://docs.conda.io/en/latest/miniconda.html).
 

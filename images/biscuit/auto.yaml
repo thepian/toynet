@@ -1,0 +1,9 @@
+# Mapping from identified label to toynet label
+donut:
+  - wooden toy
+  - wooden biscuit
+hot dog:
+  - wooden toy
+  - wooden biscuit
+person:
+  - person

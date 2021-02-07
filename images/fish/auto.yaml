@@ -1,0 +1,6 @@
+# Mapping from identified label to toynet label
+toothbrush:
+  - wooden toy
+  - wooden fish
+person:
+  - person

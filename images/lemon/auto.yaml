@@ -1,0 +1,12 @@
+# Mapping from identified label to toynet label
+frisbee:
+  - wooden toy
+  - wooden orange
+sports ball:
+  - wooden toy
+  - wooden orange
+orange:
+  - wooden toy
+  - wooden orange
+person:
+  - person

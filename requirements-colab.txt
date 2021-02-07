@@ -1,7 +1,19 @@
 wandb
+lxml
+pandas
+
+# base for Ultralytics YOLOv3 ------------------------------
+Cython
+matplotlib>=3.2.2
+numpy>=1.18.5
+Pillow
+PyYAML>=5.3
+scipy>=1.4.1
+tensorboard>=2.2
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.41.0
 opencv-contrib-python==4.5.1.48
 opencv-python==4.5.1.48
-lxml
-tqdm
 
 -e .

@@ -1,0 +1,15 @@
+# TODO add tagging https://keithweaverca.medium.com/zip-code-base-with-github-actions-for-releases-aca66f530dae
+name: MasterDeployCI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Zip Folder
+      run: zip -r release.zip . -x ".git/*" ".github/*"
+    - name: Release to Github
+      run: echo "Release"

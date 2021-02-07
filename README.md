@@ -38,6 +38,16 @@ Download credentials file and set reference in `.bash_profile`.
 https://automl.googleapis.com/v1/projects/402831859832/locations/europe-west1/models/IOD2523258239466864640:export
 
 
+Exporting 
+
+Save TF Lite to bucket toynet-us(in us-central-1)
+
+Then download locally
+
+> gsutil cp -r gs://toynet-us .
+
+
+
 ## Labelling
 
 For local labelling use [LabelImg](https://github.com/tzutalin/labelImg).
@@ -85,6 +95,39 @@ TODO: video testing of reduced size KModel.
 Darknet seems to be the proven way that will work on the Edge ML chipsets.
 
 [Darknet by Alexey](https://github.com/AlexeyAB/darknet)
+
+
+## Google Open Images
+
+> oidv6 downloader en --dataset ../dataset --type_data all --classes "Teddy Bear" --limit 20
+
+images/downloader.py
+
+Names:
+
+Toy
+Doll
+Balloon
+Teddy bear
+
+Office supplies - Scissors
+Helmet - Bicycle Helmet
+Kitchen utensil - Knife
+Weapon - Knife
+
+Telephone - Mobile phone
+Telephone - Corded phone
+Building - Remote control
+
+Person:
+Man
+Woman
+Boy
+Girl
+Body part
+Human face
+Human hand
+Human eye
 
 
 ## Tensorflow Training
@@ -181,29 +224,13 @@ Working on [Jupyter notebooks on Colab](https://colab.research.google.com/drive/
 
 The [MCIndoor20000](https://www.sciencedirect.com/science/article/pii/S2352340917307424) is a fully-labeled image dataset that was launched in Marshfield Clinic to facilitate broad use of image classification and recognition. 
 
-[Alpha Pose](http://www.mvig.org/research/alphapose.html) is an accurate multi-person pose estimator, which is the first [open-source](https://github.com/MVIG-SJTU/AlphaPose) system that achieves 70+ mAP (72.3 mAP) on COCO dataset and 80+ mAP (82.1 mAP) on MPII dataset. To match poses that correspond to the same person across frames, we also provide an efficient online pose tracker called Pose Flow. It is the first open-source online pose tracker that achieves both 60+ mAP (66.5 mAP) and 50+ MOTA (58.3 MOTA) on PoseTrack Challenge dataset.
-
-[AlphaPose for pytorch](https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch)
-
-[YOLO-Hand-Detection](https://github.com/cansik/yolo-hand-detection) variants including YOLOv4-Tiny Cross-Hands.
-
 [YOLOv3-model-pruning](https://github.com/Lam1360/YOLOv3-model-pruning) what is pruning?
 
-[YoloV4_Dectection_Example.ipynb](https://colab.research.google.com/github/sicara/tf2-yolov4/blob/master/notebooks/YoloV4_Dectection_Example.ipynb#scrollTo=qhgxoREBFHKn)
 
 familynet. toys/hands/face
 
-[Finger Detection and Tracking](https://github.com/amarlearning/Finger-Detection-and-Tracking)
-
-
-[Unified Gesture Recognition and Fingertip Detection](https://github.com/MahmudulAlam/Unified-Gesture-and-Fingertip-Detection)
-
-[Tencent FaceDetection DSFD](https://github.com/Tencent/FaceDetection-DSFD)
-
-[awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition)
 
 [shape-detection](https://github.com/jrieke/shape-detection)
-
 
 [VOC2020 Pascal2](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html#devkit)
 

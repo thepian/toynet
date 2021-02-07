@@ -1,0 +1,6 @@
+# Mapping from identified label to toynet label
+banana:
+  - wooden toy
+  - wooden banana
+person:
+  - person

@@ -1,0 +1,6 @@
+# Mapping from identified label to toynet label
+orange:
+  - wooden toy
+  - wooden orange
+person:
+  - person
