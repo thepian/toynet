@@ -104,3 +104,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 /blank_slate.zip
+/dataset/boxes

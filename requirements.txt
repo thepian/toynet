@@ -1,4 +1,8 @@
 absl-py
+oidv6
+boto3
+botocore
+googleimagedownloader
 google-cloud-automl==2.1.0
 # beautifulsoup4==4.7.1
 # dlib==19.17.0
