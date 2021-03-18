@@ -99,7 +99,7 @@ Darknet seems to be the proven way that will work on the Edge ML chipsets.
 
 ## Google Open Images
 
-> oidv6 downloader en --dataset ../dataset --type_data all --classes "Teddy Bear" --limit 20
+> oidv6 downloader en --dataset ./dataset --type_data all --classes "Teddy Bear" --limit 20
 
 images/downloader.py
 
