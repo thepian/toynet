@@ -20,7 +20,7 @@ pandas
 Pillow==6.0.0
 protobuf==3.14.0
 pyserial==3.4
-PyYAML==5.1
+PyYAML==5.4
 # pyzbar==0.1.8
 scipy
 # simpleaudio==1.0.2
